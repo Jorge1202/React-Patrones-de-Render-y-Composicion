@@ -34,9 +34,17 @@ function App() {
 
  return (
     <React.Fragment>
-      <TodoHeader>
-        <TodoCounter completedTodos={completedTodos} totalTodos={totalTodos}/>
-        <TodoSearch search={search} setSearch={setSearch} />
+      <TodoHeader load={load}>
+        <TodoCounter 
+          completedTodos={completedTodos} 
+          totalTodos={totalTodos} 
+          // load={load}  El load se pasa al componente por medio del TodoHeader  
+        />
+        <TodoSearch 
+          search={search} 
+          setSearch={setSearch} 
+          // load={load}
+        />
       </TodoHeader>
 
       <TodoList
