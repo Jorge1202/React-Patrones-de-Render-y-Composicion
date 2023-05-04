@@ -67,7 +67,7 @@ function App() {
           />
         )}
       >
-        { //Se puede mandar el contenido del componente como children o por el props.render
+        {/* { //Se puede mandar el contenido del componente como children o por el props.render
         todo => (
           <TodoItem
             key={todo.text}
@@ -76,7 +76,7 @@ function App() {
             onCompleteTodo={() => onCompleteTodo(todo)}
             onDeleteTodo={() => onDeleteTodo(todo)}
           />
-        )}
+        )} */}
       </TodoList>
 
       {
