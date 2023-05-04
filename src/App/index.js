@@ -49,15 +49,15 @@ function App() {
         onLoad={()=><TodosLoading/>}
         onEmptyTodos={()=><TodosEmpty/>}
         onTodosSearchResultsEmpty={(textoBusqueda)=><TodosSearchResultsEmpty searchText={textoBusqueda}/>} //textoBusqueda se manda como parametro en el PROPS onTodosSearchResultsEmpty(prop.searchText) dentro de TodoList
-        // render={todo => (
-        //   <TodoItem
-        //     key={todo.text}
-        //     text={todo.text}
-        //     completed={todo.completed}
-        //     onCompleteTodo={() => onCompleteTodo(todo)}
-        //     onDeleteTodo={() => onDeleteTodo(todo)}
-        //   />
-        // )}
+        render={todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onCompleteTodo={() => onCompleteTodo(todo)}
+            onDeleteTodo={() => onDeleteTodo(todo)}
+          />
+        )}
       >
         { //Se puede mandar el contenido del componente como children o por el props.render
         todo => (

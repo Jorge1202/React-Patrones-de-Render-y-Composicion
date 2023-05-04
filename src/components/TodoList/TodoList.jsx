@@ -1,7 +1,7 @@
 import React from "react";
 import "./TodoList.css";
 function TodoList(props) {
-  const renderFunc = props.children || props.render
+  const renderFunc = props.children || props.render // valida contenido del componente 
   return (
     <section className="TodoList-container">
       {props.error && props.onError()}
