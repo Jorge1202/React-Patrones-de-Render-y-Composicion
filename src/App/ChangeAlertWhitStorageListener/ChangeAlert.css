@@ -1,0 +1,43 @@
+.ChangeAlert__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: end;
+}
+
+.ChangeAlert__box {
+    background-color: rgb(68 68 68 / 85%);
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.ChangeAlert__mesagge {
+    padding: 0 15px;
+}
+
+.ChangeAlert__mesagge p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.ChangeAlert__mesagge button {
+    background-color: #ffffff;
+    height: 40px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ChangeAlert__mesagge button:hover {
+    background-color: #198491;
+    color: #fff;
+}

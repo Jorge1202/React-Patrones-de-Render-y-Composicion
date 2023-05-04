@@ -1,6 +1,7 @@
 import React from "react";
 
 function useLocalStoraje(itemName, initialValue) {
+  const [sincronizedTodos, setSincronizedTodos] = React.useState(true);
   const [load, setLoad] = React.useState(true);
   const [error, setError] = React.useState(false);
   const [item, setItem] = React.useState(initialValue);
@@ -8,6 +9,7 @@ function useLocalStoraje(itemName, initialValue) {
   React.useEffect(() => {
     setTimeout(() => {
       try {
+        console.log('Entro para refrescar');
         const localStorageItem = localStorage.getItem(itemName);
         let parsedItem = [];
 
@@ -20,11 +22,12 @@ function useLocalStoraje(itemName, initialValue) {
 
         setItem(parsedItem);
         setLoad(false);
+        setSincronizedTodos(true)
       } catch (e) {
         setError(e);
       }
     }, 2000);
-  });
+  },[sincronizedTodos]);
 
   const saveItem = (newItem) => {
     try {
@@ -36,7 +39,14 @@ function useLocalStoraje(itemName, initialValue) {
     }
   };
 
-  return { item, saveItem, load, error };
+  const sincronize = ()=>{
+    console.log('cargar lista por cambios');
+    console.log(sincronizedTodos);
+    setLoad(true)
+    setSincronizedTodos(false)
+  }
+
+  return { item, saveItem, load, error, sincronize };
 }
 
 export { useLocalStoraje };

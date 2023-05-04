@@ -7,6 +7,7 @@ function useTodos() {
     saveItem: saveTodo,
     load,
     error,
+    sincronize: sincronizeItems,
   } = useLocalStoraje("ListTodos", []);
 
   const [openModal, setOpenModal] = React.useState(false);
@@ -69,6 +70,7 @@ function useTodos() {
     listTodos,
     onCompleteTodo,
     onDeleteTodo,
+    sincronizeItems,
   } ;
 }
 

@@ -8,9 +8,9 @@ function TodoHeader({children,load}) {
    * Con React.cloneElement(child, {load}) clonamos el elemento child que recibimos y entre {} le pasamos los parametros
    */
   return (
-    <headeer>
-        {React.Children.toArray(children).map(child => React.cloneElement(child, {load}))}
-    </headeer>
+    <header>
+      {React.Children.toArray(children).map(child => React.cloneElement(child, {load}))}
+    </header>
   );
 }
 
