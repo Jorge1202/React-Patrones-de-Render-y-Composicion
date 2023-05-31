@@ -13,6 +13,7 @@ function useLocalStoraje(itemName, initialValue) {
   // const [error, setError] = React.useState(false);
   // const [item, setItem] = React.useState(initialValue);
 
+  //#region ACTION CREATORS
   const onSuccess = (item) => {
     dispatch({ type: actionTypes.SUCCESS, payload: item })
   }
@@ -25,6 +26,7 @@ function useLocalStoraje(itemName, initialValue) {
   const onSincronize = () => {
     dispatch({ type: actionTypes.SINCRONIZE })
   }
+  //#endregion ACTION CREATORS
 
 
 
